@@ -3,13 +3,14 @@
 // we can import scss and webpack will build it out into css!
 // Don't worry too much about how this happens for now - but you can feel
 // free to write any scss you want now!
-
+import './index.scss'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { default as Main } from './components/Main';
+
 
 ReactDOM.render(
   <Provider store={store}>

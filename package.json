@@ -12,13 +12,15 @@
     "pg": "^6.4.0",
     "pg-hstore": "^2.3.2",
     "react": "^15.6.1",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "sequelize": "^4.2.1"
+    "sequelize": "^4.2.1",
+    "topojson": "^3.0.0"
   },
   "scripts": {
     "start": "webpack -w & nodemon server/app.js"
