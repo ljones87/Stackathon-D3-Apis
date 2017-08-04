@@ -36,7 +36,10 @@ h3 {
 
 //bubble formatting//
 .land {
-  fill: #ddd;
+  fill: #ADCFDE;
+}
+.land :hover {
+  fill: #69E291;
 }
 
 .border {

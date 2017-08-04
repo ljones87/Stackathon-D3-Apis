@@ -5,10 +5,9 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import { fetchStateData, fetchStateJson } from '../store'
 import * as d3 from 'd3';
-import {MapBubble} from 'react-d3-map-bubble'
+import { MapBubble } from 'react-d3-map-bubble'
 var topojson = require('topojson');
-
-
+console.log(MapBubble)
   var width = 960,
   height = 600;
 
@@ -33,9 +32,9 @@ var topojson = require('topojson');
   //  var circles = topojson.feature(us, us.objects.counties).features
   //      .sort(function(a, b) { return b.properties.population - a.properties.population; })
   // var circleValue = function(d) { return +d.properties.population; };
-  //  var projection = 'null';
+    var projection = 'null';
 
-  //var tooltipContent = function(d) {return d.properties;}
+  // var tooltipContent = function(d) {return d.properties;}
 
 
 
@@ -48,30 +47,29 @@ componentDidMount() {
 
 
   render () {
-
+   //console.log(width, height, dataPolygon, polygonClass, dataMesh, meshClass, domain)
     const states = this.props.stateData
 
     return (
       <div className="container">
       <div id="chart" className="col-6" >
         <MapBubble
-        className="col-6"
-              width= {width}
-              height= {height}
-              dataPolygon= {dataCounties}
-              polygonClass= {polygonClass}
-              dataMesh= {dataStates}
-              meshClass = {meshClass}
-              domain= {domain}
-              // dataCircle= {circles}
-              // circleValue= {circleValue}
-              // circleClass= {'bubble'}
-              // projection= {projection}
-              // tooltipContent= {tooltipContent}
-              // showGraticule= {false}
-              // showTooltip= {true}
-              // showLegend= {true}
-            />
+            width= {width}
+            height= {height}
+            dataPolygon= {dataCounties}
+            polygonClass= {polygonClass}
+            dataMesh= {dataStates}
+            meshClass = {meshClass}
+            domain= {domain}
+            dataCircle= {circles}
+            circleValue= {circleValue}
+            circleClass= {'bubble'}
+            projection= {projection}
+            tooltipContent= {tooltipContent}
+            showGraticule= {false}
+            showTooltip= {true}
+            showLegend= {true}
+         />
       </div>
 
       </div>
@@ -99,3 +97,5 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 export default connect(mapState, mapDispatchToProps)(Main)
+
+
