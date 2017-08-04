@@ -3,15 +3,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import topojson from 'topojson';
-import MapBubble from 'react-d3-map-bubble';
+import MapBubble from './MapBubble';
 
-var css= require('../css/bubble.css');
+
 
 // Example
 // http://bl.ocks.org/mbostock/9943478
 (function() {
   var width = 960,
   height = 700;
+
 
   var us = require('json!../data/us.json');
 

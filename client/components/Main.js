@@ -1,52 +1,79 @@
 
-import React from 'react';
-import { connect } from 'react-redux';
-import { fetchStateData } from '../store'
+import React from 'react'
+import { connect } from 'react-redux'
+import {BrowserRouter as Router} from 'react-router-dom'
+import {Route} from 'react-router-dom'
+import { fetchStateData, fetchStateJson } from '../store'
 import * as d3 from 'd3';
-import { default as Chart} from './Chart';
-//import * as topojson from 'topojson';
+import {MapBubble} from 'react-d3-map-bubble'
+var topojson = require('topojson');
+
+
+  var width = 960,
+  height = 600;
+
+  var us = require('../data/us.json');
+
+  // data should be a MultiLineString
+  var dataStates = topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; });
+  /// data should be polygon
+  var dataCounties = topojson.feature(us, us.objects.nation);
+
+  // class
+  var meshClass = 'border';
+  var polygonClass = 'land';
+
+  // domain
+  var domain = {
+    scale: 'sqrt',
+    domain: [0, 1e6],
+    range: [0, 15]
+  };
+
+  //  var circles = topojson.feature(us, us.objects.counties).features
+  //      .sort(function(a, b) { return b.properties.population - a.properties.population; })
+  // var circleValue = function(d) { return +d.properties.population; };
+  //  var projection = 'null';
+
+  //var tooltipContent = function(d) {return d.properties;}
+
+
 
 class Main extends React.Component {
- constructor() {
-   super()
-   this.projection = d3.geoAlbersUsa().scale(1280)
-   this.quantize = d3.scaleQuantize().range(d3.range(9));
-   //this.geoPath = d3.geoPath().projection(this.projection);
-
-
- }
 
 componentDidMount() {
   this.props.fetchDataThunk()
+  this.props.fetchJsonThunk()
 }
 
 
   render () {
 
-    const states = this.props.stateData;
-    console.log(states)
+    const states = this.props.stateData
+
     return (
       <div className="container">
       <div id="chart" className="col-6" >
-        <Chart />
+        <MapBubble
+        className="col-6"
+              width= {width}
+              height= {height}
+              dataPolygon= {dataCounties}
+              polygonClass= {polygonClass}
+              dataMesh= {dataStates}
+              meshClass = {meshClass}
+              domain= {domain}
+              // dataCircle= {circles}
+              // circleValue= {circleValue}
+              // circleClass= {'bubble'}
+              // projection= {projection}
+              // tooltipContent= {tooltipContent}
+              // showGraticule= {false}
+              // showTooltip= {true}
+              // showLegend= {true}
+            />
       </div>
-      <div className="col-6">
-      {
-        states && states.map(state => {
-          return (
-            <div key={state.location}>
-              <h3>
-                {state.name}
-              </h3>
-              <ul>
-                <li>{Object.keys(state)[0]}:  {state['1984']} {state.units}</li>
-                <li>{Object.keys(state)[1]}:  {state['1994']} {state.units}</li>
-                <li>{Object.keys(state)[2]}:  {state['2004']} {state.units}</li>
-                <li>{Object.keys(state)[3]}:  {state['2014']} {state.units}</li>
-              </ul>
-            </div>)})
-      }
-      </div>
+
       </div>
     )
   }
@@ -54,7 +81,8 @@ componentDidMount() {
 
 const mapState = (state) => {
  return {
-  stateData: state.stateData
+  stateData: state.stateData,
+  stateJson: state.stateJson
  }
 }
 
@@ -62,7 +90,11 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchDataThunk() {
       dispatch(fetchStateData())
+    },
+    fetchJsonThunk() {
+      dispatch(fetchStateJson())
     }
+
   }
 }
 

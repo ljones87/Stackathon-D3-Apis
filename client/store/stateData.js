@@ -20,12 +20,13 @@ const info = (state) => {
 const GET_STATE_DATA = 'GET_STATE_DATA'
 
 
+
 /* ------------   ACTION CREATORS     ------------------ */
 
 const getStateData = (usState) => {
   return { type: GET_STATE_DATA, usState }
-
 }
+
 
 /* ------------       THUNK CREATORS     ------------------ */
 
@@ -47,6 +48,7 @@ export const fetchStateData = () => {
       .catch(err => console.log(err))
   }
 }
+
 
 /* ------------       REDUCERS     ------------------ */
 
