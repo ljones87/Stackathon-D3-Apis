@@ -3,10 +3,7 @@
   "objects": {
     "states": {
       "type": "GeometryCollection",
-      "geometries": [
-
-
-        {
+      "geometries": [ {
           "type": "MultiPolygon",
           "arcs": [
             [
@@ -63,7 +60,8 @@
               ]
             ]
           ],
-          "id": "30"
+          "id": "30",
+          "name": "MT"
         },
 
         {
@@ -141,7 +139,8 @@
               ]
             ]
           ],
-          "id": "36"
+          "id": 36,
+          "name": "NY"
         },
 
 
@@ -199,7 +198,8 @@
               ]
             ]
           ],
-          "id": "41"
+          "id": "41",
+          "name": "OR"
         },
 
         {
@@ -328,7 +328,8 @@
               ]
             ]
           ],
-          "id": "48"
+          "id": "48",
+          "name": "TX"
         },
 
         {
@@ -382,7 +383,8 @@
               ]
             ]
           ],
-          "id": "56"
+          "id": "56",
+          "name": "WY"
         },
 
         {
@@ -473,7 +475,8 @@
               ]
             ]
           ],
-          "id": "06"
+          "id": "06",
+          "name": "CA"
         },
         {
           "type": "MultiPolygon",
@@ -535,7 +538,8 @@
               ]
             ]
           ],
-          "id": "08"
+          "id": "08",
+          "name": "CO"
         }
       ]
     },
@@ -601,7 +605,8 @@
               ]
             ]
           ],
-          "id": "30"
+          "id": "30",
+          "name": "MT"
         },
         {
           "type": "MultiPolygon",
@@ -678,7 +683,8 @@
               ]
             ]
           ],
-          "id": "36"
+          "id": "36",
+          "name": "NY"
         },
         {
           "type": "MultiPolygon",
@@ -734,7 +740,8 @@
               ]
             ]
           ],
-          "id": "41"
+          "id": "41",
+          "name": "OR"
         },
         {
           "type": "MultiPolygon",
@@ -862,7 +869,8 @@
               ]
             ]
           ],
-          "id": "48"
+          "id": "48",
+          "name": "TX"
         },
         {
           "type": "MultiPolygon",
@@ -915,7 +923,8 @@
               ]
             ]
           ],
-          "id": "56"
+          "id": "56",
+          "name": "WY"
         },
         {
           "type": "MultiPolygon",
@@ -1005,7 +1014,8 @@
               ]
             ]
           ],
-          "id": "06"
+          "id": "06",
+          "name": "CA"
         },
         {
           "type": "MultiPolygon",
@@ -1067,7 +1077,8 @@
               ]
             ]
           ],
-          "id": "08"
+          "id": "08",
+          "name": "CO"
         }
       ]
     }

@@ -11,10 +11,11 @@ import store from './store';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { default as Main } from './components/Main';
 
+
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-       <Main />
+      <Main />
     </Router>
   </Provider>,
   document.getElementById('app')

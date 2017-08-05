@@ -1,9 +1,10 @@
 {
-  "name": "simple-starter",
+  "name": "stackathon1706LJ",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "ajv": "^5.2.2",
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "d3": "^4.10.0",
@@ -16,7 +17,6 @@
     "pg": "^6.4.1",
     "pg-hstore": "^2.3.2",
     "react": "^15.6.1",
-    "react-d3-basic": "^1.6.11",
     "react-d3-map-bubble": "^0.6.0",
     "react-d3-map-core": "^0.13.7",
     "react-dom": "^15.6.1",
@@ -46,11 +46,5 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
-  },
-  "jest": {
-    "scriptPreprocessor": "./node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "./node_modules/react"
-    ]
   }
 }
