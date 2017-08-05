@@ -11,7 +11,7 @@ const info = (state) => {
     '1994': state.data.series[0].data[20][1],
     '1984': state.data.series[0].data[30][1],
     location: state.data.series[0].geography,
-    units: state.data.series[0].unitsshort,
+    units: state.data.series[0].units,
   }
 }
 

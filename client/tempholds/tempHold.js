@@ -89,3 +89,20 @@ console.log(MapBubble)
 
   var tooltipContent = function(d) {return d.properties;}
 
+
+
+
+   //  var legend = svg.append("g")
+      //    .attr("class", "legend")
+      //    .attr("transform", "translate(50, 30)")
+      //    .style("font-size", "12px")
+      //    .call(d3.legend)
+
+      legend.append("circle")
+        .attr("cy", function(d) { return -radius(d); })
+        .attr("r", radius);
+
+      legend.append("text")
+        .attr("y", function(d) { return -2 * radius(d); })
+        .attr("dy", "1.3em")
+        .text(d3.format(".1s"));

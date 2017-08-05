@@ -61,7 +61,15 @@
             ]
           ],
           "id": "30",
-          "name": "MT"
+          "properties": {
+             "name": "MT",
+              "2014" :91.56,
+              "1984": 59.77,
+              "1994": 72.12,
+              "2004": 93.16,
+              "units":"million metric tons CO2"
+          }
+
         },
 
         {
@@ -139,8 +147,15 @@
               ]
             ]
           ],
-          "id": 36,
-          "name": "NY"
+          "id": "36",
+          "properties": {
+             "name": "NY",
+              "1984":184.37,
+              "1994":192.81,
+              "2004":214.96,
+              "2014":169.71,
+              "units":"million metric tons CO2"
+          }
         },
 
 
@@ -199,7 +214,14 @@
             ]
           ],
           "id": "41",
-          "name": "OR"
+          "properties": {
+             "name": "OR",
+              "1984":27.37,
+              "1994":37.01,
+              "2004":40.71,
+              "2014":37.95,
+              "units":"million metric tons CO2"
+          }
         },
 
         {
@@ -329,7 +351,14 @@
             ]
           ],
           "id": "48",
-          "name": "TX"
+          "properties": {
+             "name": "TX",
+              "1984":490.06,
+              "1994":573.42,
+              "2004":642.56,
+              "2014":641.74,
+              "units":"million metric tons CO2"
+          }
         },
 
         {
@@ -384,7 +413,14 @@
             ]
           ],
           "id": "56",
-          "name": "WY"
+          "properties": {
+             "name": "WY",
+              "1984":46.13,
+              "1994":60.39,
+              "2004":63.90,
+              "2014":65.60,
+              "units":"million metric tons CO2"
+          }
         },
 
         {
@@ -476,7 +512,14 @@
             ]
           ],
           "id": "06",
-          "name": "CA"
+           "properties": {
+             "name": "CA",
+              "1984":319.44,
+              "1994":362.39,
+              "2004":392.21,
+              "2014":357.97,
+              "units":"million metric tons CO2"
+          }
         },
         {
           "type": "MultiPolygon",
@@ -539,7 +582,14 @@
             ]
           ],
           "id": "08",
-          "name": "CO"
+          "properties": {
+             "name": "CO",
+              "1984":59.77,
+              "1994":72.12,
+              "2004":93.16,
+              "2014":91.56,
+              "units":"million metric tons CO2"
+          }
         }
       ]
     },
