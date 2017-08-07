@@ -22,17 +22,28 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 // For all GET requests that aren't to an API route,
 // we will send the index.html!
 
-app.get('/data', (req, res, next) => {
-  axios.get('http://api.eia.gov/category/?api_key=ab8ea2b9a02b487bbda3d6030af44167&category_id=371')
-    .then(res1 => res.json(res1.data))
-    .catch(next)
-})
+// app.get('/data', (req, res, next) => {
+//   axios.get('http://api.eia.gov/category/?api_key=ab8ea2b9a02b487bbda3d6030af44167&category_id=371')
+//     .then(res1 => res.json(res1.data))
+//     .catch(next)
+// })
 
-app.get('/*', function (req, res, next) {
-  res.sendFile(path.join(__dirname, '..', 'index.html'));
+
+
+app.get('/1994', function (req, res, next) {
+  res.sendFile(path.join(__dirname, '..', 'public/1994.html'));
 });
 
+app.get('/2004', function (req, res, next) {
+  res.sendFile(path.join(__dirname, '..', 'public/2004.html'));
+});
 
+app.get('/2014', function (req, res, next) {
+  res.sendFile(path.join(__dirname, '..', 'public/2014.html'));
+});
+app.get('/*', function (req, res, next) {
+  res.sendFile(path.join(__dirname, '..', 'public/index.html'));
+});
 
 // Handle 404s
 app.use(function (req, res, next) {

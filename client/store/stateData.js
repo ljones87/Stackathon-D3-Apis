@@ -42,7 +42,7 @@ export const fetchStateData = () => {
       axios.get('http://api.eia.gov/series/?api_key=ab8ea2b9a02b487bbda3d6030af44167&series_id=EMISS.CO2-TOTV-TT-TO-TX.A')
       ])
       .then(axios.spread((CO, CA, NY, MT, OR, WY, TX) => {
-        const states = [CO, CA, NY, MT, OR, WY, TX]
+        //const states = [CO, CA, NY, MT, OR, WY, TX]
         states.forEach(state => dispatch(getStateData(info(state))))
       }))
       .catch(err => console.log(err))

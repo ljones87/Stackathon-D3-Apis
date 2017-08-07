@@ -15,7 +15,7 @@ import { default as Main } from './components/Main';
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Main />
+
     </Router>
   </Provider>,
   document.getElementById('app')
