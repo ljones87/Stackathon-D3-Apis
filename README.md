@@ -1,13 +1,9 @@
-Oh, hello!
+Goal: use d3 with react-redux to display data.gov api information. Specifically used emissions data from https://www.eia.gov/opendata/qb.php?category=2251670.
 
-I am a simple starter set for building an application with React on the front end, and Express/Sequelize on the backend!
+Highlighted technologies include d3, topojson, react-redux, webpack, and express.
 
-To start using me, here's what you'll have to do:
+Completed: 15 hours( inlcudes manual edit of topo-json to include seven displayed states statistics)
 
-* Choose a name for your app!
-* `createdb YOUR_APP_NAME`
-* In `server/db.js`, swap out the 'YOUR_DB' bit with your actual db name
-* `npm install`
-* `npm start`
+Issues: found limited ability to integrate react-redux store data into d3 display. After base of desired project was attained (data changes on year click, hover over bubble displays data), abandoned for a more react-redux flexible data visualization.
 
-The start script runs webpack in watch mode, and nodemon, so any changes you make to the client or server directories should cause webpack to rebuild and the server to restart, respectively. Note that you may need to wait a moment for the webpack build to complete - if you refresh the page too soon, you may not see your changes.
+See stackathon-react-redux-victoryCharts for final product

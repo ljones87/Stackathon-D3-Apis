@@ -32,7 +32,7 @@
     const sevenStates = './data/sevenUs.json'
     const allStates = './data/us.json'
     const width = 1000,
-    height = 700;
+      height = 700;
 
 
     const path = d3.geoPath()
@@ -50,10 +50,10 @@
     d3.json(allStates, function (error, us) {
       if (error) throw error;
 
-        svg.append("d")
+      svg.append("d")
 
       svg.append("path")
-        .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+        .datum(topojson.mesh(us, us.objects.states, function (a, b) { return a !== b; }))
         .attr("class", "state-borders")
         .attr("d", path);
 
@@ -65,32 +65,30 @@
         .attr("d", path);
 
       d3.json(sevenStates, function (error, us) {
-      if (error) throw error;
+        if (error) throw error;
 
-      svg.append("g")
-        .attr("class", "bubble")
-        .selectAll("circle")
-        .data(topojson.feature(us, us.objects.states).features)
-        .enter().append("circle")
-        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-        .attr("r", function(d) { return radius(d.properties[year]*6); })
-        .attr("data-legend",function(d) { return d.properties[year]})
-        .on("mouseover", function(d) {
+        svg.append("g")
+          .attr("class", "bubble")
+          .selectAll("circle")
+          .data(topojson.feature(us, us.objects.states).features)
+          .enter().append("circle")
+          .attr("transform", function (d) { return "translate(" + path.centroid(d) + ")"; })
+          .attr("r", function (d) { return radius(d.properties[year] * 6); })
+          .attr("data-legend", function (d) { return d.properties[year] })
+          .on("mouseover", function (d) {
             dg.transition()
               .duration(200)
               .style("opacity", .9);
-            dg.html(d.properties[year] +"  "+ d.properties.units)
+            dg.html(d.properties[year] + "  " + d.properties.units)
 
-            })
-        .on("mouseout", function(d) {
+          })
+          .on("mouseout", function (d) {
             dg.transition()
               .duration(500)
               .style("opacity", 0);
-        });
+          });
       })
     })
-
-
   </script>
 </body>
 

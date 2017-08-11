@@ -45,15 +45,3 @@ export default connect(mapState, mapDispatchToProps)(Main)
 
 
 
-    //  {
-    //     states && states.map(state => {
-    //       return (
-    //         <span className="headr" key={state.location}>
-    //           <div >
-    //             {state.name.split(' ').slice(-1)}
-    //           </div>
-    //           <span className="CO2">
-    //             {state['2014']}   {state.units}
-    //           </span>
-    //         </span>)}).sort()
-    //   }
